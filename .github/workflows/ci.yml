@@ -48,3 +48,9 @@ jobs:
           cd release
           python -m compileall -q .
           echo "Paquete preparado y verificado correctamente"
+
+      - name: Ejecutar TaskFlow desde el paquete
+        run: |
+          cd release
+          printf '5\n' | python main.py
+
