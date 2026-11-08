@@ -40,3 +40,11 @@ jobs:
         with:
           name: taskflow-release
           path: dist/taskflow.tar.gz
+
+      - name: Verificar paquete de liberación
+        run: |
+          mkdir -p release
+          tar -xzf dist/taskflow.tar.gz -C release
+          cd release
+          python -m compileall -q .
+          echo "Paquete preparado y verificado correctamente"
