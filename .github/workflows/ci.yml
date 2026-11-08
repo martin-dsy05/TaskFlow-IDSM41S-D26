@@ -31,3 +31,12 @@ jobs:
           else
             echo "No existe una carpeta de pruebas."
           fi
+          
+      - name: Generar paquete de despliegue
+        run: bash scripts/generar_despliegue.sh
+
+      - name: Publicar paquete de liberación
+        uses: actions/upload-artifact@v4
+        with:
+          name: taskflow-release
+          path: dist/taskflow.tar.gz
