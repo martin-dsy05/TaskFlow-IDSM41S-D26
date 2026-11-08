@@ -1,0 +1,2 @@
+# TaskFlow utiliza bibliotecas estándar de Python.
+# No requiere dependencias externas.
